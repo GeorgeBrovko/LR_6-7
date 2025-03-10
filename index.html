@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин товаров</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index_2.html" class="nav-link">Главная</a>
+            <a href="https://georgebrovko.github.io/BrovkoGeorge_pie_11/" class="nav-link">Лабораторная работа №2</a>
+            <a href="https://georgebrovko.github.io/Lab_3/ " class="nav-link">Лабораторная работа №3</a>
+            <a href="https://georgebrovko.github.io/Lab_4/ " class="nav-link">Лабораторная работа №4</a>
+            <a href="https://georgebrovko.github.io/LR_5/" class="nav-link">Лабораторная работа №5</a>
+          </nav>
+        <div class="header-actions">
+            <button id="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
+            <button id="profile-btn">Профиль</button>
+        </div>
+    </header>
+
+    <section class="filters">
+        <select id="category-filter">
+            <option value="all">Все категории</option>
+            <option value="electronics">Электроника</option>
+            <option value="clothing">Одежда</option>
+            <option value="accessories">Аксессуары</option>
+            <option value="books">Книги</option>
+        </select>
+
+        <select id="color-filter">
+            <option value="all">Любой цвет</option>
+            <option value="pink">Розовый</option>
+            <option value="blue">Синий</option>
+            <option value="black">Черный</option>
+            <option value="turquoise">Бирюзовый</option>
+            <option value="white">Белый</option>
+        </select>
+
+        <select id="size-filter">
+            <option value="all">Любой размер</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+        </select>
+
+        <input type="number" id="min-price" placeholder="Мин. цена">
+        <input type="number" id="max-price" placeholder="Макс. цена">
+
+        <button id="apply-filters">Применить фильтры</button>
+        <button id="add-product-btn">Добавить товар</button>
+    </section>
+
+    <section class="search-section">
+        <input type="text" id="search" placeholder="Поиск товаров...">
+    </section>
+
+    <main>
+        <section class="products" id="products-list">
+        </section>
+    </main>
+
+    <footer>
+        © Бровко Г.А., ПИЭ-11.
+    </footer>
+
+    <!-- Модальное окно добавления товара -->
+    <div id="add-product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-add-modal">&times;</span>
+            <h2>Добавить товар</h2>
+            <input type="text" id="product-name" placeholder="Название товара">
+            <textarea id="product-description" placeholder="Описание товара"></textarea>
+            <input type="number" id="product-price" placeholder="Цена">
+            <input type="file" id="product-image">
+            <select id="product-category">
+                <option value="electronics">Электроника</option>
+                <option value="clothing">Одежда</option>
+                <option value="accessories">Аксессуары</option>
+                <option value="books">Книги</option>
+            </select>
+            <select id="product-color">
+                <option value="pink">Розовый</option>
+                <option value="blue">Синий</option>
+                <option value="black">Черный</option>
+                <option value="turquoise">Бирюзовый</option>
+                <option value="white">Белый</option>
+            </select>
+            <select id="product-size">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+            </select>
+            <button id="save-product-btn">Сохранить</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно просмотра товара -->
+    <div id="view-product-modal" class="modal">
+        <div class="modal-content" id="view-product-content">
+            <!-- Динамический контент -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

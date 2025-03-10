@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 36px;
+    color: #333;
+}
+
+.lab-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.lab-button {
+    width: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lab-button:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* Медиазапросы для экранов с шириной до 600px */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .lab-buttons {
+        margin-top: 30px;
+    }
+
+    .lab-button {
+        width: 90%;
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-title {
+        font-size: 24px;
+    }
+
+    .lab-button {
+        font-size: 14px;
+    }
+}
