@@ -1,108 +1,109 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Магазин товаров</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин товаров</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index_2.html" class="nav-link">Главная</a>
-            <a href="https://georgebrovko.github.io/BrovkoGeorge_pie_11/" class="nav-link">Лабораторная работа №2</a>
-            <a href="https://georgebrovko.github.io/Lab_3/ " class="nav-link">Лабораторная работа №3</a>
-            <a href="https://georgebrovko.github.io/Lab_4/ " class="nav-link">Лабораторная работа №4</a>
-            <a href="https://georgebrovko.github.io/LR_5/" class="nav-link">Лабораторная работа №5</a>
-          </nav>
-        <div class="header-actions">
-            <button id="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
-            <button id="profile-btn">Профиль</button>
-        </div>
-    </header>
 
-    <section class="filters">
-        <select id="category-filter">
-            <option value="all">Все категории</option>
-            <option value="electronics">Электроника</option>
-            <option value="clothing">Одежда</option>
-            <option value="accessories">Аксессуары</option>
-            <option value="books">Книги</option>
-        </select>
+<header>
+  <nav class="navbar">
+    <a href="index_2.html" class="nav-link">Главная</a>
+    <a href="https://georgebrovko.github.io/BrovkoGeorge_pie_11/" class="nav-link">Лабораторная работа №2</a>
+    <a href="https://georgebrovko.github.io/Lab_3/" class="nav-link">Лабораторная работа №3</a>
+    <a href="https://georgebrovko.github.io/Lab_4/" class="nav-link">Лабораторная работа №4</a>
+    <a href="https://georgebrovko.github.io/LR_5/" class="nav-link">Лабораторная работа №5</a>
+  </nav>
+  <div class="header-actions">
+    <button id="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
+    <button id="profile-btn">Профиль</button>
+    <button id="add-product-btn">Добавить товар</button>
+  </div>
+</header>
 
-        <select id="color-filter">
-            <option value="all">Любой цвет</option>
-            <option value="pink">Розовый</option>
-            <option value="blue">Синий</option>
-            <option value="black">Черный</option>
-            <option value="turquoise">Бирюзовый</option>
-            <option value="white">Белый</option>
-        </select>
-
-        <select id="size-filter">
-            <option value="all">Любой размер</option>
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-        </select>
-
-        <input type="number" id="min-price" placeholder="Мин. цена">
-        <input type="number" id="max-price" placeholder="Макс. цена">
-
-        <button id="apply-filters">Применить фильтры</button>
-        <button id="add-product-btn">Добавить товар</button>
-    </section>
-
-    <section class="search-section">
+<main>
+  <section class="filters">
+    <h2>Фильтровать по</h2>
+    <div class="filter-options">
         <input type="text" id="search" placeholder="Поиск товаров...">
-    </section>
-
-    <main>
-        <section class="products" id="products-list">
-        </section>
-    </main>
-
-    <footer>
-        © Бровко Г.А., ПИЭ-11.
-    </footer>
-
-    <!-- Модальное окно добавления товара -->
-    <div id="add-product-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="close-add-modal">&times;</span>
-            <h2>Добавить товар</h2>
-            <input type="text" id="product-name" placeholder="Название товара">
-            <textarea id="product-description" placeholder="Описание товара"></textarea>
-            <input type="number" id="product-price" placeholder="Цена">
-            <input type="file" id="product-image">
-            <select id="product-category">
-                <option value="electronics">Электроника</option>
-                <option value="clothing">Одежда</option>
-                <option value="accessories">Аксессуары</option>
-                <option value="books">Книги</option>
-            </select>
-            <select id="product-color">
-                <option value="pink">Розовый</option>
-                <option value="blue">Синий</option>
-                <option value="black">Черный</option>
-                <option value="turquoise">Бирюзовый</option>
-                <option value="white">Белый</option>
-            </select>
-            <select id="product-size">
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-            </select>
-            <button id="save-product-btn">Сохранить</button>
-        </div>
+      <select id="size-filter">
+        <option value="">Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <select id="color-filter">
+        <option value="">Color</option>
+        <option value="Красный">Красный</option>
+        <option value="Синий">Синий</option>
+        <option value="Зеленый">Зеленый</option>
+      </select>
+      <select id="gender-filter">
+        <option value="">Gender</option>
+        <option value="Мужской">Мужской</option>
+        <option value="Женский">Женский</option>
+      </select>
+      <input type="number" id="min-price" placeholder="Min Price">
+      <input type="number" id="max-price" placeholder="Max Price">
+      <select id="activity-filter">
+        <option value="">Activity</option>
+        <option value="Спорт">Спорт</option>
+        <option value="Повседневное">Повседневное</option>
+      </select>
+      <select id="weight-filter">
+        <option value="">Weight</option>
+        <option value="Легкий">Легкий</option>
+        <option value="Средний">Средний</option>
+        <option value="Тяжелый">Тяжелый</option>
+      </select>
+      <select id="type-filter">
+        <option value="">Type</option>
+        <option value="Одежда">Одежда</option>
+        <option value="Обувь">Обувь</option>
+      </select>
+      <button id="filter-btn">Применить фильтры</button>
     </div>
+  </section>
 
-    <!-- Модальное окно просмотра товара -->
-    <div id="view-product-modal" class="modal">
-        <div class="modal-content" id="view-product-content">
-            <!-- Динамический контент -->
+  <div id="products-list" class="products-container">
+
+  </div>
+</main>
+
+<div id="add-product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Добавить новый товар</h2>
+      <form id="add-product-form">
+        <input type="text" id="product-name" placeholder="Имя продукта" required>
+        <textarea id="product-description" placeholder="Описание продукта" required></textarea>
+        <input type="number" id="product-price" placeholder="Цена продукта" required>
+        <div class="file-input">
+          <label for="product-image">Выберите файл</label>
+          <span id="file-name">Файл не выбран</span>
+          <input type="file" id="product-image" accept="image/*" required>
         </div>
+        <button type="submit">Сохранить</button>
+      </form>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+<div id="product-detail-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="detail-product-name"></h2>
+      <img id="detail-product-image" src="" alt="Product Image">
+      <p id="detail-product-description"></p>
+      <div class="price" id="detail-product-price"></div>
+    </div>
+  </div>
+
+<footer>
+  <p>© Бровко Г.А., ПИЭ-11</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
