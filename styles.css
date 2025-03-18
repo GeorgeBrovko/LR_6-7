@@ -56,7 +56,6 @@
     background-color: #e6b800;
   }
   
-  /* Filters */
   .filters {
     padding: 20px;
     background-color: #fff;
@@ -65,10 +64,14 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   
-  .filters h2 {
+  .filters p {
     margin-bottom: 15px;
   }
   
+  .filters h1 {
+    margin-bottom: 15px;
+  }
+
   .filter-options {
     display: flex;
     flex-wrap: wrap;
@@ -291,13 +294,15 @@
     color: #000;
   }
   
-  /* Footer */
   footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
   }

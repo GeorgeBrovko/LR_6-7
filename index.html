@@ -17,53 +17,35 @@
     <a href="https://georgebrovko.github.io/LR_5/" class="nav-link">Лабораторная работа №5</a>
   </nav>
   <div class="header-actions">
-    <button id="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
-    <button id="profile-btn">Профиль</button>
     <button id="add-product-btn">Добавить товар</button>
   </div>
 </header>
 
 <main>
   <section class="filters">
-    <h2>Фильтровать по</h2>
+    <h1>Магазин товаров</h1>
+    <p>Filter by</p>
     <div class="filter-options">
         <input type="text" id="search" placeholder="Поиск товаров...">
+        <button id="search-btn">Поиск</button>
       <select id="size-filter">
         <option value="">Size</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
       </select>
       <select id="color-filter">
         <option value="">Color</option>
-        <option value="Красный">Красный</option>
-        <option value="Синий">Синий</option>
-        <option value="Зеленый">Зеленый</option>
       </select>
       <select id="gender-filter">
         <option value="">Gender</option>
-        <option value="Мужской">Мужской</option>
-        <option value="Женский">Женский</option>
       </select>
-      <input type="number" id="min-price" placeholder="Min Price">
-      <input type="number" id="max-price" placeholder="Max Price">
       <select id="activity-filter">
         <option value="">Activity</option>
-        <option value="Спорт">Спорт</option>
-        <option value="Повседневное">Повседневное</option>
       </select>
       <select id="weight-filter">
         <option value="">Weight</option>
-        <option value="Легкий">Легкий</option>
-        <option value="Средний">Средний</option>
-        <option value="Тяжелый">Тяжелый</option>
       </select>
       <select id="type-filter">
         <option value="">Type</option>
-        <option value="Одежда">Одежда</option>
-        <option value="Обувь">Обувь</option>
       </select>
-      <button id="filter-btn">Применить фильтры</button>
     </div>
   </section>
 
